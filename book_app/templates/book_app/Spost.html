@@ -1,0 +1,30 @@
+{% extends "book_app/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+
+<div class="col-lg-12 container_data_new" >
+    {% for each_data in data %}
+       <h2> {{ each_data.title }} </h2>
+    <br>
+    <h4 class="skill_data"> {{ each_data.category }} </h4>
+    <br>
+        <h6> <pre> {{ each_data.Review }} </pre> </h6>
+
+
+    <div class="btn_data">
+         {% if each_data.author == user %}
+    <a class="btn btn-danger  " href="{% url 'delete_post' each_data.id %}" type="submit"> Delete </a></button>
+    <a class="btn btn-primary " href="{% url 'update_post' each_data.id %}" type="submit"> Update </a></button>
+        {% endif %}
+    </div>
+
+    {% endfor %}
+
+   </div>
+
+
+
+{% endblock content %}

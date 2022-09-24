@@ -1,0 +1,43 @@
+{% extends "book_app/base.html" %}
+{% load static %}
+{% block content %}
+
+
+{% if value == "1" %}
+    {% for each_data in My_post_data %}
+
+        <div class="row container " >
+            <div class="col-lg-3 box1 ">
+            </div>
+        <div class="col-lg-9 container_data ">
+           <h2> {{ each_data.title }} </h2></br>
+            <h4>{{ each_data.category }}</h4>
+
+
+            <ul> <pre> {{ each_data.Review|safe|truncatewords:"9"|linebreaks }} </pre> </ul>
+                    <a  href="{% url 'single_post'  each_data.id %}" >Read More</a>
+
+          </div>
+
+        </div>
+
+        <br>
+        <br>
+    {% endfor %}
+
+{% endif %}
+
+
+
+{% if value == "2" %}
+<div class="row container">
+    <div class="col-lg-3 box1 ">
+        </div>
+        <div class="col-lg-9 container_empty ">
+            <h1 class="txt_algn"> Create your First Review Post </h1>
+        </div>
+</div>
+{% endif %}
+
+
+{% endblock content %}

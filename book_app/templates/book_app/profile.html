@@ -1,0 +1,38 @@
+{% extends "book_app/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="footr" >
+
+    <div class="row sec_data container-fluid">
+
+        <div class="col-lg-3 ">
+
+        </div>
+
+        <div class="col-lg-7  sec_color" >
+
+            <pre>
+                        <h3> Username         : {{ user.username }} </h3>
+                        <h3> Email            : {{ user.email }} </h3>
+                        <h3> Mobile Number    : {{ user.profile.mobile }} </h3>
+                        <h3> Work Experience  : {{ user.profile.Work_Experience }} </h3>
+                        <h3> Your Best Work   : {{ user.profile.your_best_work }} </h3>
+
+            </pre>
+
+            <div class="d-grid gap-2 ">
+                <a class="no-style" href="{% url 'author_update_profile' %}">
+                <button class="btn btn-primary" type="submit" value = "submit"> UPDATE PROFILE </button> </a>
+
+                </div>
+
+        </div>
+
+</section>
+
+<br>
+
+
+ {% endblock content %}

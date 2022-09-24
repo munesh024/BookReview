@@ -1,0 +1,21 @@
+{% extends "book_app/Reader/Reader_base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% load static %}
+
+
+<div class="container_data_new">
+<form action="" method="POST" enctype = "multipart/form-data">
+	{% csrf_token %}
+
+{{ user_form|crispy }}
+{{ profile_form|crispy }}
+
+<br>
+    <br>
+<div class="d-grid gap-2 btn_div">
+                <button class="btn btn-primary" type="submit" value = "submit">Update</button>
+            </div>
+</form>
+</div>
+{% endblock content %}

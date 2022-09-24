@@ -1,0 +1,114 @@
+{% extends "book_app/login_base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="alert alert-info">
+  <p class="txt_data"><strong> {{ legend }} </strong>   </p>
+</div>
+
+<div class="row container-fluid">
+
+    <div class="col-lg-3">
+
+
+    </div>
+
+    <div class="col-lg-7 container_data ">
+        <form action="" method="POST" novalidate>
+            {% csrf_token %}
+
+            {{ form|crispy }}
+            <br>
+            <div class="d-grid gap-2 btn_div">
+                <button class="btn btn-primary" type="submit" value = "submit">LOGIN</button>
+            </div>
+
+        </form>
+
+        <h4> New User ?  <a href="{% url 'Reader_register'  %}"> Register Now </a></h4>
+
+        </div>
+
+</div>
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--from .forms import SignUpForm-->
+
+<!--#newly added function-->
+<!--def update_user_data(user):-->
+<!--    Profile.objects.update_or_create(user=user, defaults={'mob': user.profile.mob},)-->
+
+<!--def signup(request):-->
+<!--    if request.method == 'POST':-->
+<!--        form = SignUpForm(request.POST)-->
+<!--        if form.is_valid():-->
+<!--            user = form.save()-->
+<!--            user.refresh_from_db()-->
+
+<!--            #newly added-->
+<!--            user.profile.mob = form.cleaned_data.get('mob')-->
+<!--            update_user_data(user)-->
+
+<!--            # load the profile instance created by the signal-->
+<!--            user.save()-->
+<!--            raw_password = form.cleaned_data.get('password1')-->
+
+<!--            # login user after signing up-->
+<!--            user = authenticate(username=user.username, password=raw_password)-->
+<!--            login(request, user)-->
+
+<!--            # redirect user to home page-->
+<!--            return redirect('home')-->
+<!--    else:-->
+<!--        form = SignUpForm()-->
+<!--    return render(request, 'signup.html', {'form': form})-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

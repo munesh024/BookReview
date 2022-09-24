@@ -1,0 +1,48 @@
+{% extends "book_app/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="col-lg-12 container_data_new" >
+
+	<h1>  {{ post.title }} </h1> <br>
+<p> {{ post.category }} </p>
+<p> by {{ post.author}} </p>
+<p> at {{ post.Review }} </p>
+
+   </div>
+<br>
+<br>
+<h1>  Comments : </h1>
+<br>
+{% for comment in post.comments.all %}
+<div class="comments">
+
+
+    <div> <img src="{{ comment.author.Reader_profile.image.url }}" class="img-circle new_image" alt="comment.author" width="100px" height="100px"> </div> <h6> {{ comment.create_date }}   by   {{ comment.author }}</h6>
+
+            <h3> <p> {{ comment.content }} </p> </h3>
+    </div>
+
+</div>
+
+{% endfor %}
+
+
+
+
+<br>
+<br>
+<br>
+<div class="container">
+
+<form action="" method="POST" novalidate>
+	{% csrf_token %}
+
+{{form|crispy}}
+
+<br>
+<input type="submit" value = "submit">
+</form>
+
+</div>
+
+{% endblock content %}

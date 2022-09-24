@@ -1,0 +1,64 @@
+{% extends "book_app/base.html" %}
+{% load static %}
+{% block content %}
+
+<!--<div class="row">-->
+<!--        <div class="col-lg-6 box1">-->
+<!--          <p class="txt">You are one step closer in finding your Dream Job.</p>-->
+
+<!--        </div>-->
+
+
+{% if data != "False"  %}
+
+{% for each_data in data %}
+
+    <div class="row container " >
+        <div class="col-lg-3 box1 ">
+        </div>
+    <div class="col-lg-9 container_data ">
+       <h2> {{ each_data.title }} </h2></br>
+        <h4>{{ each_data.category }}</h4>
+        <h5> {{ each_data.location }} </h5>
+
+
+        <ul> <pre> {{ each_data.Review|safe|truncatewords:"9"|linebreaks }} </pre> </ul>
+
+                <a  href="{% url 'Author_Comment_post'  each_data.id %}" >Read More</a>
+
+      </div>
+
+    </div>
+
+    <br>
+    <br>
+{% endfor %}
+
+{% endif %}
+
+{% if data == "False" %}
+<div class="row container">
+    <div class="col-lg-3 box1 ">
+        </div>
+        <div class="col-lg-6 container_empty ">
+            <h1> Create your First Job Posts </h1>
+        </div>
+</div>
+{% endif %}
+
+<p class="page_data">
+    {% if page_obj.has_previous %}
+<a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+{% endif %}
+<span> Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }} </span>
+
+{% if page_obj.has_next %}
+<a href="?page={{ page_obj.next_page_number }}">Next</a>
+{% endif %}
+</p>
+
+
+
+  {% endblock content %}
+
+<!--'Job_title','company_name','Experience','Salary','location','Job_desc','Skills'-->

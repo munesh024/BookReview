@@ -1,0 +1,42 @@
+{% extends "book_app/Reader/Reader_base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="footr" >
+
+    <div class="row sec_data container-fluid">
+
+        <div class="col-lg-3 ">
+
+        </div>
+
+        <div class="col-lg-7  sec_color" >
+
+            <pre> <div class="Container-fluid"> <h3> <img src="{{ user.Reader_profile.image.url }}" class="img-circle new_c" alt="user.username" width="200px" height="200px"> </h3>
+                    <h3 class="imgdaata"> Profile Picture </h3>
+            </div>
+
+
+                        <h3> Name            : {{ user.Reader_profile.Name }} </h3>
+                        <h3> Email           : {{ user.email }} </h3>
+                        <h3> Mobile          : {{ user.Reader_profile.mobile }} </h3>
+                        <h3> Your Interest   : {{ user.Reader_profile.Interest }} </h3>
+                        <h3> Location        : {{ user.Reader_profile.Location }} </h3>
+
+
+            </pre>
+
+            <div class="d-grid gap-2 ">
+                <a class="no-style" href="{% url 'reader_update_profile' %}">
+                <button class="btn btn-primary" type="submit" value = "submit"> UPDATE PROFILE </button> </a>
+
+                </div>
+        </div>
+
+</section>
+
+<br>
+
+
+ {% endblock content %}
