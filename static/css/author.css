@@ -1,0 +1,67 @@
+.container_data{
+    background-color: #EAF6F6;
+    margin-top: 4rem;
+    padding-top: 4rem;
+    font-family: 'Montserrat-light';
+    font-size: 1.6rem ;
+}
+
+.container_empty{
+    padding :5%;
+    margin-top:5rem;
+    background-color: #EAF6F6;
+    text-align: center;
+}
+
+.sec_color{
+    background-color: #C1F4C5;
+    margin-top: 4rem;
+}
+
+.page_data{
+    text-align: right;
+    padding-right: 4rem;
+    padding-top: 3rem;
+}
+
+.data_foot{
+    margin-top : 5%;
+}
+
+.img-circle {
+    border-radius: 50%;
+    margin-left: 27%;
+}
+.new_c{
+    margin-left: 32%;
+    padding-bottom: 7%;
+}
+
+.new_image{
+    margin-left:0rem;
+}
+
+.txt_data{
+    margin-left : 27%;
+}
+
+.container_row{
+    width:60%;
+}
+
+.container_data_new{
+    background-color: #EAF6F6;
+    padding-top: 4rem;
+    padding-left: 4rem;
+    padding-bottom: 4rem;
+    font-family: 'Montserrat-light';
+    font-size: 1.6rem ;
+}
+
+.comments{
+    padding-left: 4rem;
+}
+
+.imgdaata{
+    text-align: center;
+}

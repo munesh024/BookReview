@@ -1,0 +1,192 @@
+/* Section1 */
+
+#title{
+  background-color: #59CE8F;
+}
+
+.navbar{
+  padding: 1.5rem 3.5rem 1.5rem 3.5rem;
+}
+
+.head{
+  font-size: 2rem;
+  font-family: 'Montserrat-light';
+}
+
+
+
+.nav-item{
+  padding-left: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  color:black;
+  font-family: Merriweather;
+}
+
+.img_road{
+    width:100%;
+    height: 600px;
+    position: absolute;
+    z-index: -1;
+}
+
+.box1{
+  margin-bottom: 2rem;
+}
+
+.txt_2{
+  padding-top:3rem;
+  padding-bottom:2rem;
+  color: white;
+}
+
+.txt{
+font-family: 'Montserrat', sans-serif;
+line-height: 1.5;
+color: white;
+padding-top: 10%;
+padding-left: 20%;
+padding-right: 25%;
+padding-bottom: 15%;
+font-weight: 700;
+font-size: 3.5rem;
+}
+
+.card_data{
+  padding:1.5rem;
+  background-color: #D4ECDD;
+  opacity: .95;
+}
+
+.para1{
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 1rem;
+
+}
+.para2{
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+}
+.btn{
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  size:1.5rem;
+}
+
+.first_part{
+  padding-top:4rem;
+}
+
+/* Section1 */
+#block1{
+  margin-top:  55%;
+}
+
+.data_now{
+  background-color: red;
+  margin-top: 10%;
+}
+
+/* #footer{
+  background-color: #6FEDD6;
+
+  text-align: center;
+} */
+
+#footer{
+  background-color: #fff;
+  margin-left:4%;
+  margin-bottom: 5%;
+  text-align: center;
+  width : 97%;
+  padding-top: 5%;
+}
+
+.data_foot{
+  width = 95%;
+}
+
+i{
+  padding-top:2rem;
+  padding:1rem;
+}
+
+.ftext{
+  padding:2rem 2rem ;
+}
+
+/* testimonials */
+#testimonials{
+
+background-color: #42855B;
+text-align: center;
+color: #fff;
+margin-top:2rem;
+/* margin-bottom: 9rem; */
+
+}
+
+.carousel-inner{
+  padding: 7% 15%;
+}
+
+.testimonials-img{
+  border-radius: 100%;
+  width: 10%;
+  margin: 20px;
+}
+
+#press{
+  padding: 3%;
+  background-color: RGB(66, 133, 91);
+  text-align: center;
+}
+
+.Press-img{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+#features{
+  margin-top: 9rem;
+  padding: 9% 15%;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.cont2{
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.data1{
+  padding:5rem;
+}
+
+.favconp{
+  padding: 3rem;
+}
+
+.fav-img{
+  font-size: 3.5rem;
+  color: #ef8172;
+  padding-left: 44%;
+  margin-bottom: 1.5rem;
+}
+
+.fav-img:hover{
+  color: #ff4c68;
+}
+
+.para{
+  text-align:center;
+}
